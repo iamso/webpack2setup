@@ -21,6 +21,7 @@ npm run build
 - Hot Module Replacement
 - ES6 (Babel)
 - jQuery
+- ESLint (Recommended and Google)
 - Uglify
 - Sass
 - Minimize

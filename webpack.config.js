@@ -49,21 +49,28 @@ module.exports = {
   entry: entry,
   plugins: plugins,
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel-loader'],
-      exclude: '/node_modules/'
-    },
-    {
-      test: /\.(png|jpg|gif)$/,
-      loaders: ['url-loader?limit=10000&name=images/[hash:12].[ext]'],
-      exclude: '/node_modules/'
-    },
-    {
-      test: /\.scss$/,
-      loaders: scssLoader,
-      exclude: '/node_modules/'
-    }]
+    rules: [
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        loader: "eslint-loader"
+      },
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: ['url-loader?limit=10000&name=images/[hash:12].[ext]'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        use: scssLoader,
+        exclude: /node_modules/
+      }
+    ]
   },
   output: {
     path: __dirname + '/dist',
