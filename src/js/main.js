@@ -1,4 +1,4 @@
-let styles = require("../scss/main.scss");
+require('../scss/main.scss');
 
 import $ from 'jquery';
 import Button from './partials/button';
@@ -6,8 +6,7 @@ import Image from './partials/image';
 import {mul} from './partials/mathLib';
 
 let $app = $('#app');
-
-let newText = () => (`<h1>Testing ES6</h1>`);
+let newText = () => ('<h1>Testing ES6</h1>');
 let newButton = () => (Button.button);
 let newImage = () => (`${Image}`);
 
@@ -25,15 +24,16 @@ $app.append(`
   </div>
 `);
 
-$app.append('<div>' + newButton() + '</div>');  
+$app.append('<div>' + newButton() + '</div>');
 $app.append('<div>' + newImage() + '</div>');
 
-const newShit = () => (mul(5, 5));
-$app.append('<div>5 * 5 = ' + newShit() + '</div>');
+let calcVal = 5;
+const newShit = () => (mul(calcVal, calcVal));
+$app.append(`<div>${calcVal} * ${calcVal} = ` + newShit() + '</div>');
 
 const newAppStatus = () => (`
   <div class="envStatus">
-    DEV: ${DEVELOPMENT.toString()} | PRD: ${PRODUCTION.toString()}
+    DEV: ${DEVELOPMENT.toString()} | PRD: ${DEVELOPMENT.toString()}
   </div>
 `);
 $app.append(newAppStatus());
@@ -42,14 +42,14 @@ Button.attachEl();
 
 $('#page1').on('click', () => {
   System.import('./partials/page1')
-    .then(pageModule => {
+    .then((pageModule) => {
       $('#menuContent').html(pageModule.default);
     });
 });
 
 $('#page2').on('click', () => {
   System.import('./partials/page2')
-    .then(pageModule => {
+    .then((pageModule) => {
       $('#menuContent').html(pageModule.default);
     });
 });
