@@ -17,7 +17,7 @@ npm run build
 
 
 ## Features
-- webpack 2
+- [webpack 2](https://webpack.js.org/)
 - Hot Module Replacement
 - ES6 (Babel)
 - jQuery

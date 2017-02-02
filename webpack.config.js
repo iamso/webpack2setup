@@ -33,6 +33,8 @@ plugins.push(
 );
 
 const scssIdentifier = PRODUCTION ? '[hash:base24:10]' : '[path][name]---[local]';
+
+// Loaders are read from right to left
 const scssLoader = PRODUCTION
   ? ExtractTextPlugin.extract({
       loader: ['css-loader?minimize&importLoaders=1', 'postcss-loader', 'sass-loader?localIdentName=' + scssIdentifier]
