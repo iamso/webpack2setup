@@ -1,15 +1,15 @@
-var styles = require("../scss/main.scss");
+let styles = require("../scss/main.scss");
 
 import $ from 'jquery';
 import Button from './partials/button';
 import Image from './partials/image';
 import {mul} from './partials/mathLib';
 
-var $app = $('#app');
+let $app = $('#app');
 
-var newText = () => (`<h1>Testing ES6</h1>`);
-var newButton = () => (Button.button);
-var newImage = () => (`${Image}`);
+let newText = () => (`<h1>Testing ES6</h1>`);
+let newButton = () => (Button.button);
+let newImage = () => (`${Image}`);
 
 $app.html(''); // Clean DOM before append
 
