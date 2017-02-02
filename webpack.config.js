@@ -35,9 +35,9 @@ plugins.push(
 const scssIdentifier = PRODUCTION ? '[hash:base24:10]' : '[path][name]---[local]';
 const scssLoader = PRODUCTION
   ? ExtractTextPlugin.extract({
-      loader: 'css-loader?minimize=true!sass-loader?localIdentName=' + scssIdentifier
+      loader: ['css-loader?minimize&importLoaders=1', 'postcss-loader', 'sass-loader?localIdentName=' + scssIdentifier]
     })
-  : ['style-loader', 'css-loader', 'sass-loader?localIdentName=' + scssIdentifier];
+  : ['style-loader', 'css-loader?importLoaders=1', 'postcss-loader', 'sass-loader?localIdentName=' + scssIdentifier];
 
 module.exports = {
   externals: {
