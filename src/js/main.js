@@ -33,7 +33,7 @@ $app.append(`<div>${calcVal} * ${calcVal} = ` + newShit() + '</div>');
 
 const newAppStatus = () => (`
   <div class="envStatus">
-    DEV: ${DEVELOPMENT.toString()} | PRD: ${DEVELOPMENT.toString()}
+    DEV: ${DEVELOPMENT.toString()} | PRD: ${PRODUCTION.toString()}
   </div>
 `);
 $app.append(newAppStatus());
