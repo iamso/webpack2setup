@@ -23,6 +23,7 @@ npm run build
 - jQuery
 - ESLint (Recommended and Google)
 - Uglify
+- Modernizr
 - Sass
 - Minimize
 - Autoprefixer (PostCSS)

@@ -1,6 +1,7 @@
 require('../scss/main.scss');
 
 import $ from 'jquery';
+import Modernizr from 'modernizr';
 import Button from './partials/button';
 import Image from './partials/image';
 import {mul} from './partials/mathLib';

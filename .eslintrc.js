@@ -8,13 +8,13 @@ module.exports = exports = {
     "jquery": true
   },
   "ecmaFeatures": {
-    // env=es6 doesn't include modules, which we are using
     "modules": true
   },
   "extends": ["eslint:recommended", "google"],
   "rules": {
     "no-console": WARN,
-    "no-undef": WARN
+    "no-undef": WARN,
+    "no-unused-vars": WARN
   },
   "parserOptions": {
     "sourceType": "module"

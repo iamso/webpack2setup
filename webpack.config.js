@@ -53,7 +53,11 @@ module.exports = {
       {
         test: /\.js$/,
         enforce: "pre",
-        loader: "eslint-loader"
+        use: "eslint-loader"
+      },
+      {
+        test: /\.modernizrrc/,
+        loader: 'modernizr-loader!json-loader'
       },
       {
         test: /\.js$/,
@@ -71,6 +75,11 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
+  },
+  resolve: {
+    alias: {
+      modernizr$: __dirname + "/.modernizrrc"
+    }
   },
   output: {
     path: __dirname + '/dist',
