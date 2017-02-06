@@ -22,8 +22,8 @@ npm run build
 - ES6 (Babel)
 - jQuery
 - ESLint (Recommended and Google)
-- Uglify
 - Modernizr
+- Uglify
 - Sass
 - Minimize
 - Autoprefixer (PostCSS)
@@ -31,6 +31,15 @@ npm run build
 - File Loader
 - Tree Shaking
 - Code splitting and loading on demand
+
+
+## Roadmap
+- [x] Sass
+- [x] Minimize
+- [x] Autoprefixer (PostCSS)
+- [x] ESLint
+- [x] Modernizr
+- [ ] Icon fonts
 
 
 ## Contribution
