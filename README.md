@@ -4,7 +4,10 @@
 
 ## Installation
 ```
-npm install webpack-setup
+# Clone or download repo
+
+# Install dependencies
+npm install
 
 # Run for development
 npm run dev
