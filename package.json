@@ -1,6 +1,6 @@
 {
-  "name": "webpack-setup",
-  "version": "1.0.1",
+  "name": "webpack2setup",
+  "version": "1.0.0",
   "description": "Webpack2 project template",
   "keywords": [
     "webpack 2",
