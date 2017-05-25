@@ -56,8 +56,8 @@ module.exports = {
         use: "eslint-loader"
       },
       {
-        test: /\.modernizrrc/,
-        loader: 'modernizr-loader!json-loader'
+        test: /\.modernizrrc.js/,
+        use: 'modernizr-loader'
       },
       {
         test: /\.js$/,
@@ -78,7 +78,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      modernizr$: __dirname + "/.modernizrrc"
+      modernizr$: __dirname + "/.modernizrrc.js"
     }
   },
   output: {
