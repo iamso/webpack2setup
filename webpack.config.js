@@ -15,7 +15,12 @@ var entry = PRODUCTION
 
 var plugins = PRODUCTION
   ? [
-      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          drop_console: true
+        },
+        preserveComments: false
+      }),
       new ExtractTextPlugin('style-[contenthash:10].min.css'),
       new HTMLWebpackPlugin({
         template: 'index-template.html'
