@@ -11,4 +11,4 @@ var server = new WebpackDevServer(compiler, {
 		colors: true
 	}
 });
-server.listen(8080, "localhost", function() {});
+server.listen(4321, "localhost", function() {});

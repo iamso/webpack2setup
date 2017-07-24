@@ -10,7 +10,7 @@ var entry = PRODUCTION
   : [
       './src/js/main.js',
       'webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:8080'
+      'webpack-dev-server/client?http://localhost:4321'
     ];
 
 var plugins = PRODUCTION
