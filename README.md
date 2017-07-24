@@ -1,5 +1,5 @@
-# Webpack2Setup
-> Template project with webpack 2, ES6 and Sass
+# WebpackSetup
+> Template project with webpack, ES6 and Sass
 
 
 ## Installation
@@ -19,7 +19,7 @@ npm run build
 
 
 ## Features
-- [webpack 2](https://webpack.js.org/)
+- [webpack](https://webpack.js.org/)
 - Hot Module Replacement
 - ES6 (Babel)
 - jQuery
