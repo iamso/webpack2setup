@@ -40,11 +40,11 @@ plugins.push(
 const scssIdentifier = PRODUCTION ? '[hash:base24:10]' : '[path][name]---[local]';
 
 // Loaders are read from right to left
-const scssLoader = PRODUCTION
+const cssLoader = PRODUCTION
   ? ExtractTextPlugin.extract({
-      loader: ['css-loader?minimize&importLoaders=1', 'postcss-loader', 'sass-loader?localIdentName=' + scssIdentifier]
+      use: ['css-loader?minimize&importLoaders=1', 'postcss-loader']
     })
-  : ['style-loader', 'css-loader?importLoaders=1', 'postcss-loader', 'sass-loader?localIdentName=' + scssIdentifier];
+  : ['style-loader', 'css-loader?importLoaders=1', 'postcss-loader'];
 
 module.exports = {
   externals: {
