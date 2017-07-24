@@ -61,29 +61,30 @@ module.exports = {
         use: "eslint-loader"
       },
       {
-        test: /\.modernizrrc.js/,
+        test: /\.modernizrrc.js$/,
         use: 'modernizr-loader'
       },
       {
         test: /\.js$/,
-        use: ['babel-loader'],
+        use: 'babel-loader',
+        exclude: /node_modules\/lodash/
+      },
+      {
+        test: /\.(png|jpg|gif|svg|ico)$/,
+        // use: ['url-loader?limit=10000&name=images/[hash:12].[ext]'],
+        use: 'file-loader?name=[name].[ext]',
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: ['url-loader?limit=10000&name=images/[hash:12].[ext]'],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        use: scssLoader,
+        test: /\.css$/,
+        use: cssLoader,
         exclude: /node_modules/
       }
     ]
   },
   resolve: {
     alias: {
-      modernizr$: __dirname + "/.modernizrrc.js"
+      modernizr$: __dirname + '/.modernizrrc.js',
     }
   },
   output: {
