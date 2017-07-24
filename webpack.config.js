@@ -23,8 +23,8 @@ var plugins = PRODUCTION
       }),
       new ExtractTextPlugin('style-[contenthash:10].min.css'),
       new HTMLWebpackPlugin({
-        template: 'index-template.html'
-      })
+        template: 'index-template.html',
+      }),
     ]
   : [
       new webpack.HotModuleReplacementPlugin()
